@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <!-- Game Name Image at the top center -->
+    <ImageView
+        android:id="@+id/gameNameImage"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/egg_land"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Basket at the bottom of the screen -->
+    <ImageView
+        android:id="@+id/basket"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/basket" />
+
+    <!-- TextView to display score at the top of the screen -->
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="100dp" />
+
+    <!-- Game Over Layout -->
+    <LinearLayout
+        android:id="@+id/gameOverLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/splattered_egg" />
+
+        <TextView
+            android:id="@+id/gameOverText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Over"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/highScoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Score: 0"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <!-- Play Button -->
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Game"
+        android:layout_centerInParent="true" />
+
+    <!-- Translucent overlay -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:alpha="0.5"/>
+</RelativeLayout>
